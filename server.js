@@ -18,8 +18,15 @@ app.get("/", function (request, response) {
 
 //START OF YOUR CODE...
 
-//...END OF YOUR CODE
+app.listen(9090, () => {
+  console.log("This is listineing on port 9090.");
+});
 
+app.get("/quotes", function (request, response) {
+  response.send({ quotes });
+});
+
+//...END OF YOUR CODE
 //You can use this function to pick one element at random from a given array
 //example: pickFromArray([1,2,3,4]), or
 //example: pickFromArray(myContactsArray)
